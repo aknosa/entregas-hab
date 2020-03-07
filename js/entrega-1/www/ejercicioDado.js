@@ -1,13 +1,29 @@
+"use strict";
+
 function aleatorio(minimo, maximo) {
   return Math.round(Math.random() * (maximo - minimo) + minimo);
 }
-let suma = 0;
-let dado = 0;
 
-for (i = 1; suma < 50; i++) {
-  dado = aleatorio(1, 6);
-  suma = suma + dado;
-  console.log(`Tirada ${i}: Has sacado un ${dado} y llevas ${suma} puntos.`);
+function tirarDado() {
+  return prompt("¿Quieres tirar el dado? y/n");
 }
 
-console.log(`Has conseguido un total de ${suma} puntos.`);
+function dado() {
+  let suma = 0;
+  let dado = 0;
+  for (let i = 1; suma < 50; i++) {
+    const respuesta = tirarDado();
+    if (respuesta === "y") {
+      dado = aleatorio(1, 6);
+      suma = suma + dado;
+      console.log(
+        `Tirada ${i}: Has sacado un ${dado} y llevas ${suma} puntos.`
+      );
+    } else if (respuesta === "n") {
+      break;
+    }
+  }
+  console.log(`Has conseguido un total de ${suma} puntos.`);
+}
+
+dado();
