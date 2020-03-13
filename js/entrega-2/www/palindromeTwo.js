@@ -10,19 +10,21 @@ function palindromo(frase) {
   if (grupo2.length % 2 === 0) {
     for (let i = 0; i < grupo2.length / 2; i++) {
       if (grupo2[i] === grupo2[grupo2.length - 1 - i]) {
-        return true;
+        continue;
       } else {
         return false;
       }
     }
+    return true;
   } else {
     for (let i = 0; i < (grupo2.length - 1) / 2; i++) {
       if (grupo2[i] === grupo2[grupo2.length - 1 - i]) {
-        return true;
+        continue;
       } else {
         return false;
       }
     }
+    return true;
   }
 }
 
