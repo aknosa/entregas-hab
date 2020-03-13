@@ -23,7 +23,9 @@ function dado() {
       break;
     }
   }
-  console.log(`Has conseguido un total de ${suma} puntos.`);
+  console.log(
+    `Ha salido un ${dado} y has conseguido un total de ${suma} puntos.`
+  );
 }
 
 dado();
