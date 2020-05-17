@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Juego de miniaventura" />
+    <meta name="copyright" content="Andrés Canosa" />
+    <title>Miniaventura - Contacto</title>
+    <style>
+      html {
+        background-color: #dcd6f7;
+      }
+      h1,
+      p,
+      nav,
+      form {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVEGADOR -->
+    <nav>
+      <a href="../index.html">INICIO |</a
+      ><a href="pages/contact.html"> CONTACTO (Estás aquí)</a>
+    </nav>
+    <!-- /NAVEGADOR -->
+    <main>
+      <!-- TÍTULO Y SUBTÍTULO -->
+      <div>
+        <h1>¿Necesitas algo?</h1>
+        <p>
+          Puedes contactarnos en nuestro
+          <a href="https://twitter.com/explore" target="_blank">Twitter</a>,
+          enviarnos un
+          <a
+            href="mailto:micorreo@dominio.com?Subject=Queremos%20contactar%20contigo"
+            >correo</a
+          >
+          o rellenar el siguiente formulario:
+        </p>
+      </div>
+      <!-- /TÍTULO Y SUBTÍTULO -->
+      <!-- FORMULARIO -->
+      <div>
+        <form>
+          <!-- DATOS PERSONALES -->
+          <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Nombre(s)</label>
+            <input name="name" type="text" placeholder="Ponga aquí su nombre" />
+            <br />
+            <br />
+            <label for="surname">Apellido(s)</label>
+            <input
+              name="surname"
+              type="text"
+              placeholder="Ponga aquí sus apellidos"
+            />
+            <br />
+            <br />
+            <label for="email">email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Ponga aquí su email"
+            />
+          </fieldset>
+          <!-- /DATOS PERSONALES -->
+          <!-- SOLICITUD -->
+          <fieldset>
+            <legend>¿Qué necesitas?</legend>
+            <label for="subject">Asunto del mensaje</label>
+            <input name="subject" placeholder="Asunto" />
+            <br />
+            <br />
+            <label for="message">Tu mensaje</label>
+            <textarea
+              id="message"
+              rows="5"
+              cols="50"
+              placeholder="Escriba aquí lo que necesita"
+            ></textarea>
+          </fieldset>
+          <!-- /SOLICITUD -->
+          <br />
+          <!-- BOTÓN -->
+          <button>
+            Enviar
+          </button>
+          <!-- /BOTÓN -->
+        </form>
+      </div>
+      <!-- /FORMULARIO -->
+    </main>
+    <!-- FOOTER Y COPYRIGHT -->
+    <footer>
+      <hr />
+      <p>Andrés Canosa, Copyright 2020-2021</p>
+    </footer>
+    <!-- /FOOTER Y COPYRIGHT -->
+  </body>
+</html>
