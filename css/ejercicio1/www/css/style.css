@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Roboto:wght@300;400;500&display=swap");
+
+html {
+  --dark: #222222;
+  --white: #ffffff;
+  --grey: #888888;
+  --lightgrey: #f0f0f0;
+  --title-font: "Cairo", sans-serif;
+  --font: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/img/electronica.jpeg);
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-position: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+body main > header {
+  background-color: var(--dark);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+body main header > h1 {
+  font-family: var(--title-font);
+  color: var(--white);
+  text-decoration: underline;
+}
+
+body main header > p {
+  font-family: var(--font);
+  color: var(--white);
+  font-weight: 500;
+}
+
+body main header nav a {
+  background-color: var(--lightgrey);
+  color: var(--dark);
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.05rem 1.75rem;
+  margin-top: 2rem;
+}
+
+body main header nav a strong {
+  font-family: var(--font);
+  font-weight: 500;
+  display: block;
+  font-size: 1.4rem;
+}
+
+/* ASIDE */
+
+body section > aside {
+  background-color: var(--grey);
+  color: var(--dark);
+  font-family: var(--font);
+  text-decoration: underline;
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+body section aside h1 {
+  padding-bottom: 0.5rem;
+}
+
+/* MAIN SECTION */
+
+body > main section {
+  background-color: var(--white);
+  font-family: var(--font);
+}
+
+body > main section p {
+  padding: 1rem 0.75rem;
+}
+
+body > main section p img {
+  width: 100%;
+  object-fit: cover;
+}
+
+body > main section .intro {
+  color: var(--grey);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+body main section > p:not(.intro) {
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--grey);
+}
+
+/* FOOTER */
+
+body footer {
+  background-color: var(--grey);
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  font-family: var(--font);
+  text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+  body main section > p:not(.intro) {
+    columns: 2;
+  }
+  body > main section p img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  body main header > h1 {
+    font-size: 3rem;
+  }
+  body main header > p {
+    font-size: 1.5rem;
+  }
+  body > main section .intro {
+    padding: 1.9rem 1.9rem;
+  }
+  body section > aside {
+    padding: 0.5rem 0.75rem;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+  }
+  body section > aside h1,
+  body section > aside p {
+    font-size: 0.75rem;
+  }
+  .intro {
+    text-align: center;
+  }
+  body > main section p img {
+    width: 100%;
+  }
+}
