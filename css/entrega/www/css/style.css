@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Ubuntu:wght@300;400&display=swap");
+
+html {
+  --font1: Ubuntu, sans-serif;
+  --font2: Roboto, sans-serif;
+  --white: white;
+  --black: #222222;
+  --blue: #a6b1e1;
+  --blue2: #dcd6f7;
+  --grey: #dbdbdb;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body > header,
+body > .intro,
+body > .list,
+body > .forms {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--blue2);
+}
+
+body > .intro,
+body > .list {
+  background-color: var(--blue);
+}
+
+/* PORTADA */
+
+body > header {
+  background-image: url(/img/fondocaballos.jpg);
+  background-size: cover;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+header > h1 {
+  font-family: var(--font1);
+  font-weight: 400;
+  text-shadow: 0 0 10px black;
+  color: var(--white);
+  font-size: 2.25rem;
+}
+
+header > div {
+  flex-grow: 1;
+}
+header > div nav {
+  font-size: 0.75rem;
+}
+
+header > div nav ul {
+  display: flex;
+}
+header > div nav ul li {
+  padding: 0.5rem;
+}
+
+header > div nav ul li a {
+  list-style: none;
+  font-weight: 500;
+  font-family: var(--font2);
+  color: var(--black);
+  text-decoration: none;
+}
+
+header > nav {
+  order: 1;
+  padding-bottom: 1rem;
+}
+
+header > nav a {
+  background-color: var(--black);
+  font-size: 0.75rem;
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font2);
+  font-weight: 500;
+  padding: 0.2rem 1.5rem;
+}
+
+/* TEXTO DE LA PÁGINA */
+
+.intro h2 {
+  color: var(--white);
+  font-family: var(--font1);
+  font-weight: 300;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.intro p {
+  color: var(--black);
+  font-family: var(--font2);
+  font-weight: 500;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+/* LISTA DE CABALLOS */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.list ul li {
+  color: var(--white);
+  font-family: var(--font2);
+  background-color: var(--black);
+}
+
+.list ul li h3 {
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 3.25rem;
+  text-align: center;
+}
+
+.list ul li p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+.list ul li {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.list ul li a {
+  background-color: var(--grey);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font2);
+  text-align: center;
+  display: block;
+  padding: 1rem 1rem;
+}
+
+.list ul li figure {
+  background-color: var(--black);
+}
+
+/* FORMULARIOS */
+
+body > .forms {
+  background-color: var(--white);
+  margin-bottom: 6rem;
+}
+.forms > h2 {
+  font-family: var(--font1);
+  color: var(--blue);
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+  padding-right: 15vw;
+}
+
+.forms form > fieldset {
+  border: 0;
+  display: block;
+  padding: 1rem;
+}
+
+.forms form input[type="text"] {
+  width: 85%;
+  padding: 0.5rem;
+  margin-left: 0;
+  background-color: var(--blue);
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+}
+
+.forms form textarea {
+  width: 85%;
+  margin-left: 0;
+  background-color: var(--blue);
+  border: 1px solid var(--black);
+  border-radius: 4px;
+}
+
+.forms input[type="checkbox"] {
+  margin-left: 1rem;
+}
+/* Texto del formulario */
+.forms form label {
+  font-family: var(--font2);
+  font-weight: 300;
+}
+.forms label {
+  font-family: var(--font2);
+  font-weight: 300;
+}
+
+.forms nav a {
+  font-family: var(--font2);
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 0.5rem 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+@media (min-width: 500px) {
+  body > header {
+    height: 300px;
+  }
+  header > nav a {
+    font-size: 1rem;
+    padding: 0.3rem 1.75rem;
+  }
+  .intro h2 {
+    font-size: 3rem;
+  }
+  .intro p {
+    columns: 2;
+    font-size: 0.9rem;
+  }
+  .list ul li,
+  figure {
+    width: 55vw;
+  }
+  .list ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .forms form input[type="text"] {
+    width: 90%;
+  }
+  .forms form textarea {
+    width: 90%;
+  }
+}
+@media (min-width: 726px) {
+  .forms form > fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+  .forms form textarea {
+    width: 50%;
+  }
+  .forms form input[type="text"] {
+    width: 40%;
+  }
+  #province {
+    width: 25vw;
+  }
+}
+@media (min-width: 750px) {
+  body > header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  header > h1 {
+    font-size: 4rem;
+    margin-right: 3.5rem;
+  }
+  body header > div {
+    flex-grow: 0;
+    font-weight: 400;
+    order: -1;
+  }
+  header > div nav ul {
+    padding: 0;
+  }
+  header > div nav ul li a {
+    font-size: 1rem;
+  }
+  header > nav {
+    margin-right: 0.5rem;
+  }
+  header > nav a {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+  }
+  body > header {
+    height: 500px;
+  }
+  .intro {
+    padding-left: 8px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .intro h2 {
+    font-size: 4rem;
+  }
+  .intro > p {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .list ul li figure {
+    width: 100%;
+  }
+  .list ul li {
+    width: 30%;
+  }
+  .list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .list ul li {
+    margin: 1rem 0.75rem;
+  }
+  .list ul li h3 {
+    font-size: 2.5rem;
+  }
+  .list ul li a {
+    font-size: 1.5rem;
+  }
+  .forms {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .forms > h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  body > header {
+    padding: 1rem;
+    height: 600px;
+  }
+  header > h1 {
+    margin-right: 4rem;
+    font-size: 4rem;
+  }
+  header > div nav ul li {
+    padding: 1rem;
+  }
+  header > div nav ul li a {
+    font-size: 1.25rem;
+  }
+  header > nav {
+    margin-right: 1.5rem;
+  }
+  header > nav a {
+    font-size: 1.2rem;
+    padding: 0.5rem 4rem;
+  }
+  .list ul li h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  body > header {
+    height: 800px;
+    padding: 0;
+  }
+  header > h1 {
+    font-size: 6.5rem;
+    margin-right: 3rem;
+  }
+  header > nav a {
+    font-size: 1.5rem;
+    padding: 0.6rem 4.5rem;
+  }
+  header > div nav ul li a {
+    font-size: 1.5rem;
+  }
+  .intro {
+    padding: 0;
+  }
+  .intro h2 {
+    font-size: 6rem;
+    padding-left: 1.5rem;
+    padding-bottom: 3rem;
+  }
+  .intro > p {
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 15rem;
+  }
+  .list ul li h3 {
+    font-size: 4rem;
+  }
+  body .forms h2 {
+    font-size: 5rem;
+  }
+}
