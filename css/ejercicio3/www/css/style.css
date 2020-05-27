@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@200;400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --font: "Biryani", sans-serif;
+  --black: #222222;
+  --white: #ffffff;
+  --red: #c70039;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* Clase común */
+
+.action {
+  font-family: var(--font);
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--red);
+  padding: 0.25rem 2rem 0.25rem 2rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+section > p {
+  font-family: var(--font);
+  font-weight: 200;
+  padding: 1rem;
+}
+
+/* Header */
+
+body > header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+}
+
+body > header img {
+  border-radius: 50%;
+  border: 4px solid var(--black);
+  width: 10rem;
+}
+
+body > header h1 {
+  font-family: var(--font);
+  font-weight: 800;
+  padding-top: 1rem;
+}
+
+body > header a:nth-child(3) {
+  font-family: var(--font);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--black);
+  text-align: center;
+}
+
+/* Introducción de la página principal */
+
+#intro p {
+  padding: 1rem;
+  font-family: var(--font);
+  font-weight: 200;
+}
+
+/* Lista de experiencias */
+
+body #experience h2 {
+  font-family: var(--font);
+  font-weight: 400;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+body #experience ul {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  font-family: var(--font);
+  font-weight: 200;
+  list-style: square;
+}
+
+/* Footer */
+
+body > footer {
+  background-color: var(--black);
+  order: -1;
+}
+
+body > footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+body > footer nav ul li a {
+  font-size: 1rem;
+  font-family: var(--font);
+  font-weight: 200;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding: 0.3rem;
+}
+
+/* Imagen de about.html */
+
+body#interior section figure {
+  padding: 16px;
+}
+
+@media (min-width: 700px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body footer {
+    width: 100%;
+  }
+  body > header {
+    width: 100%;
+    padding: 4rem 1rem 1.5rem 1rem;
+  }
+  body header h1 {
+    font-size: 3rem;
+  }
+  body > header a:nth-child(3) {
+    font-size: 1.25rem;
+  }
+  body header figure img {
+    width: 13rem;
+  }
+  #intro p {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  #intro {
+    width: 45%;
+  }
+  body #experience h2 {
+    padding-top: 1rem;
+  }
+  #experience {
+    width: 45%;
+  }
+  #intro p {
+    padding-top: 1rem;
+  }
+  body#interior {
+    justify-content: space-between;
+  }
+  body#interior header {
+    width: 35%;
+    text-align: right;
+    padding-right: 0;
+  }
+  body#interior header h1 {
+    font-size: 5rem;
+  }
+  body#interior header a {
+    padding-right: 32px;
+    margin-right: 0;
+  }
+  body#interior > section {
+    width: 55%;
+    margin-right: 1rem;
+  }
+  body#interior > section figure img {
+    height: auto;
+  }
+  body#interior > section figure {
+    padding: 0;
+  }
+  section > p {
+    padding-left: 0rem;
+  }
+
+  body > footer {
+    flex-grow: 1;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  body > header,
+  body > #intro,
+  body > #experience {
+    width: 33%;
+  }
+  body > header {
+    padding: 1rem 0 0 0;
+    text-align: right;
+  }
+  body > header figure img {
+    width: 11rem;
+  }
+  body > header h1 {
+    font-size: 4rem;
+  }
+  body > header a:nth-child(3) {
+    width: 100%;
+    font-size: 1rem;
+  }
+  body > #intro {
+    padding-left: 2rem;
+  }
+  body > #experience {
+    padding-left: 2rem;
+  }
+  body#interior header h1 {
+    font-size: 6rem;
+  }
+  body#interior section {
+    padding-right: 4rem;
+  }
+  body#interior > header > .action {
+    padding: 0.25rem 4rem 0.25rem 4rem;
+  }
+  #intro > .action {
+    padding: 0.25rem 4rem 0.25rem 4rem;
+  }
+}
