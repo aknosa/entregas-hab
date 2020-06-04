@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Reloj";
+  src: url("/font/reloj.woff2"), url("/font/reloj.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Reloj", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+body.manana {
+  background-image: url("/img/manana.jpg");
+}
+
+body.tarde {
+  background-image: url("/img/tarde.jpg");
+}
+
+body.noche {
+  background-image: url("/img/noche.jpg");
+}
+
+main {
+  font-family: "Reloj";
+  text-align: center;
+  color: #79d70f;
+  border: 5px dotted #79d70f;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+#principal {
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 1rem;
+}
+
+#saludo {
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 1rem;
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 40px;
+  }
+}

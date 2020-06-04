@@ -1,0 +1,39 @@
+section.temperatures {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+table {
+  background-color: #a4c5c6;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+table caption {
+  padding: 1rem;
+}
+
+td:not(:first-child) {
+  border-bottom: 1px solid white;
+  border-radius: 10px;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+td.low {
+  background-color: #a8df65;
+}
+
+td.medium {
+  background-color: #f8b24f;
+}
+
+td.high {
+  background-color: #bb3b0e;
+}
