@@ -54,13 +54,17 @@ async function addTodo({ text, priority, done, date }) {
 async function markAsDone(index) {
   // Abrir la lista actual de todos
   const todos = await readTodoList();
-  const todosArray = todos.todos;
   let newIndex = index - 1;
   // Buscar el todo con el index que recibe
   // Modificar el objecto del todo como done: true
-  todos.todos[newIndex].done = true;
-  // Guardar la lista actualizada
-  await saveTodos(todos);
+  if (todos.todos[newIndex]) {
+    todos.todos[newIndex].done = true;
+    // Guardar la lista actualizada
+    await saveTodos(todos);
+    console.log(`Marco el todo ${index} como HECHO.`);
+  } else {
+    console.error("El todo no existe.");
+  }
 }
 
 async function markAsUnDone(index) {
@@ -70,9 +74,15 @@ async function markAsUnDone(index) {
   // Buscar el todo con el index que recibe
   let newIndex = index - 1;
   // Modificar el objecto del todo como done: false
-  todos.todos[newIndex].done = false;
   // Guardar la lista actualizada
-  await saveTodos(todos);
+  if (todos.todos[newIndex]) {
+    todos.todos[newIndex].done = false;
+    console.log(`Marco el todo ${index} como PENDIENTE.`);
+    // Guardar la lista actualizada
+    await saveTodos(todos);
+  } else {
+    console.error("El todo no existe.");
+  }
 }
 
 async function listTodos() {
@@ -80,8 +90,11 @@ async function listTodos() {
   let todos = await readTodoList();
   let todosArray = todos.todos;
   // Imprimir la lista en la consola
+  console.log();
+  console.log(chalk.blue("Esta es tu lista de cosas que hacer:"));
   for (let todo of todosArray) {
     let todoDate = formatDistanceToNow(new Date(todo.date), { locale: es });
+    console.log();
     console.log(
       `${todosArray.indexOf(todo) + 1}. ${todo.text}${
         todo.priority ? chalk.red(" (Prioridad alta)") : ""
